@@ -48,7 +48,7 @@ jobs:
         git init
         git config --global user.name "${GIT_AUTHOR_NAME}"
         git config --global user.email "${GIT_AUTHOR_EMAIL}"
-        git checkout deployment
+        git checkout -b deployment
         git add .
         git commit -m "Add build artifacts"
         git remote add origin ${REPO_URL}
