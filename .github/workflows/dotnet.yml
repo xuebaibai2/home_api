@@ -31,7 +31,8 @@ jobs:
     - name: Archive build artifacts
       run: |
         mkdir -p output
-        cp -r home_api/console1/bin/Release/* /output
+        ls -al /
+        cp -r console1/bin/Release/net8.0/publish/* /output
 
     - name: Commit and push artifacts to another repo 🗃️
       env: 
