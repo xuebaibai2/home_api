@@ -23,8 +23,11 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./console1/console1.sln
     - name: Build
-      run: dotnet build ./console1/console1.sln --no-restore
-
+      run: dotnet publish ./console1/console1.sln --no-restore -c Release
+    - name: Output current directory
+      run: |
+        pwd
+        ls -al
     - name: Archive build artifacts
       run: |
         mkdir -p output
