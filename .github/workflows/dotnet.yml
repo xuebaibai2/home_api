@@ -49,4 +49,4 @@ jobs:
         git add .
         git commit -m "Add build artifacts - Build #${BUILD_NUMBER}"
         git remote add origin ${REPO_URL}
-        git push --force origin ${BRANCH_NAME}
+        git push --force --set-upstream origin ${BRANCH_NAME}
