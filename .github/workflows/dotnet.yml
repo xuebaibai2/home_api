@@ -28,10 +28,11 @@ jobs:
       run: |
         pwd
         ls -al
+        whoami
     - name: Archive build artifacts
       run: |
         mkdir -p output
-        ls -al /
+        ls -al ..
         cp -r console1/bin/Release/net8.0/publish/* /output
 
     - name: Commit and push artifacts to another repo 🗃️
