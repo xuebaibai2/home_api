@@ -24,16 +24,11 @@ jobs:
       run: dotnet restore ./console1/console1.sln
     - name: Build
       run: dotnet publish ./console1/console1.sln --no-restore -c Release
-    - name: Output current directory
-      run: |
-        pwd
-        ls -al
-        whoami
     - name: Archive build artifacts
       run: |
         mkdir deploy
-        cp -r console1/bin/Release/net8.0/publish/* deploy/
-        ls -al deploy/
+        mkdir deploy/console1
+        cp -r console1/bin/Release/net8.0/publish/* deploy/console1/
 
     - name: Commit and push artifacts to another repo 🗃️
       env: 
