@@ -38,7 +38,7 @@ jobs:
         GIT_COMMITTER_EMAIL: xuebaibai2@hotmail.com
         REPO_URL: https://${{ secrets.DEPLOYMENT_USER }}:${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ secrets.TARGET_REPO_OWNER }}/${{ secrets.TARGET_REPO_NAME }}.git
         BUILD_NUMBER: ${{ github.run_number }}
-        BRANCH_NAME: deployment/console1-${{ github.run_number }}
+        BRANCH_NAME: deployment\console1-${{ github.run_number }}
       run: |
         echo ${REPO_URL}
         cd deploy
