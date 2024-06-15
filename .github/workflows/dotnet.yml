@@ -41,8 +41,9 @@ jobs:
         GIT_AUTHOR_EMAIL: xuebaibai2@hotmail.com
         GIT_COMMITTER_NAME: github-actions
         GIT_COMMITTER_EMAIL: xuebaibai2@hotmail.com
-        REPO_URL: https://${{ secrets.DEPLOYMENT_USER }}:${{ secrets.DEPLOYMENT_TOKEN }}@github.com/xuebaibai2/Pi_Deployment.git
+        REPO_URL: https://${{ secrets.DEPLOYMENT_USER }}:${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ secrets.TARGET_REPO_OWNER }}/${{ secrets.TARGET_REPO_NAME }}.git
       run: |
+        echo ${REPO_URL}
         cd deploy
         git init
         git config --global user.name "${GIT_AUTHOR_NAME}"
