@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/cayden/dotnet/console1/console1.csproj": {}
+    "/home/cayden/Documents/src/home_api/console1/console1.csproj": {}
   },
   "projects": {
-    "/home/cayden/dotnet/console1/console1.csproj": {
+    "/home/cayden/Documents/src/home_api/console1/console1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/cayden/dotnet/console1/console1.csproj",
+        "projectUniqueName": "/home/cayden/Documents/src/home_api/console1/console1.csproj",
         "projectName": "console1",
-        "projectPath": "/home/cayden/dotnet/console1/console1.csproj",
+        "projectPath": "/home/cayden/Documents/src/home_api/console1/console1.csproj",
         "packagesPath": "/home/cayden/.nuget/packages/",
-        "outputPath": "/home/cayden/dotnet/console1/obj/",
+        "outputPath": "/home/cayden/Documents/src/home_api/console1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/cayden/.nuget/NuGet/NuGet.Config"
