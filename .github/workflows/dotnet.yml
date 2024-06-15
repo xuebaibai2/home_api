@@ -37,14 +37,16 @@ jobs:
         GIT_COMMITTER_NAME: github-actions
         GIT_COMMITTER_EMAIL: xuebaibai2@hotmail.com
         REPO_URL: https://${{ secrets.DEPLOYMENT_USER }}:${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ secrets.TARGET_REPO_OWNER }}/${{ secrets.TARGET_REPO_NAME }}.git
+        BUILD_NUMBER: ${{ github.run_number }}
+        BRANCH_NAME: deployment/console1-${{env.BUILD_NUMBER}}
       run: |
         echo ${REPO_URL}
         cd deploy
         git init
         git config --global user.name "${GIT_AUTHOR_NAME}"
         git config --global user.email "${GIT_AUTHOR_EMAIL}"
-        git checkout -b deployment
+        git checkout -b ${BRANCH_NAME}
         git add .
-        git commit -m "Add build artifacts"
+        git commit -m "Add build artifacts - Build #${BUILD_NUMBER}"
         git remote add origin ${REPO_URL}
-        git push --force origin deployment
+        git push --force origin ${BRANCH_NAME}
